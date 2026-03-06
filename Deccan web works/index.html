@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deccan Web Works | Premium Web Development Agency in Hyderabad</title>
+    <meta name="description"
+        content="Deccan Web Works crafts high-performance, scalable websites and web apps that drive real business results for startups, e-commerce, and enterprises.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS (CDN for simple deploy) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0B2038',
+                            dark: '#05111E',
+                            green: '#04382D',
+                            gold: '#D4AF37',
+                            lightGold: '#E6C96C'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-brand-dark dark:text-gray-100 font-sans transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 bg-white/80 dark:bg-brand-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-heading font-bold text-2xl tracking-tight text-brand-blue dark:text-white">
+                        Deccan<span class="text-brand-gold">Web</span>Works
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-sm font-medium hover:text-brand-gold transition-colors">Services</a>
+                    <a href="#why-us" class="text-sm font-medium hover:text-brand-gold transition-colors">Why Us</a>
+                    <a href="#process" class="text-sm font-medium hover:text-brand-gold transition-colors">Process</a>
+                    <a href="#portfolio"
+                        class="text-sm font-medium hover:text-brand-gold transition-colors">Portfolio</a>
+                    <a href="#contact" class="text-sm font-medium hover:text-brand-gold transition-colors">Contact</a>
+
+                    <button id="theme-toggle"
+                        class="text-gray-500 dark:text-gray-400 hover:text-brand-gold dark:hover:text-brand-gold transition-colors">
+                        <i class="fas fa-moon dark:hidden" id="theme-toggle-dark-icon"></i>
+                        <i class="fas fa-sun hidden dark:block" id="theme-toggle-light-icon"></i>
+                    </button>
+
+                    <a href="#contact"
+                        class="px-6 py-2.5 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-brand-lightGold transition-all transform hover:-translate-y-0.5 shadow-lg shadow-brand-gold/30">Get
+                        Started</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="theme-toggle-mobile" class="text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn"
+                        class="text-gray-600 dark:text-gray-300 hover:text-brand-gold focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-brand-dark border-b border-gray-200 dark:border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50 dark:hover:bg-white/5">Services</a>
+                <a href="#why-us"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50 dark:hover:bg-white/5">Why
+                    Us</a>
+                <a href="#process"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50 dark:hover:bg-white/5">Process</a>
+                <a href="#portfolio"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50 dark:hover:bg-white/5">Portfolio</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50 dark:hover:bg-white/5">Contact</a>
+                <a href="#contact"
+                    class="block px-3 py-2 mt-4 text-center rounded-full bg-brand-gold text-brand-dark font-medium">Get
+                    Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-brand-blue/90 to-brand-green/90 dark:from-brand-dark dark:to-brand-blue/90 mix-blend-multiply z-10">
+            </div>
+            <!-- Subtly using a city skyline suggestive placeholder -->
+            <img src="https://images.unsplash.com/photo-1577083610486-13a5e19af335?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                alt="Hyderabad Abstract Skyline" class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+        </div>
+
+        <!-- Glow effects -->
+        <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-gold/20 rounded-full blur-[100px] z-10 pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-green/30 rounded-full blur-[100px] z-10 pointer-events-none">
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 border border-brand-gold/50 text-brand-lightGold text-sm font-semibold tracking-wider mb-6 animate-fade-in-up">
+                PREMIUM WEB DEVELOPMENT AGENCY
+            </span>
+            <h1
+                class="text-5xl md:text-7xl font-heading font-bold mb-6 leading-tight animate-fade-in-up animation-delay-100">
+                We Build Powerful, Scalable <br class="hidden md:block" /> & <span
+                    class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 text-transparent bg-clip-text drop-shadow-sm inline-block">Premium
+                    Websites.</span>
+            </h1>
+            <p
+                class="mt-4 max-w-2xl mx-auto text-xl text-gray-300 md:text-2xl font-light mb-10 animate-fade-in-up animation-delay-200">
+                Looking for the best web development agency? Deccan Web Works crafts high-performance, scalable websites
+                and web apps that drive real business results.
+            </p>
+            <div
+                class="flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up animation-delay-300">
+                <a href="#contact"
+                    class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gold text-brand-dark font-semibold text-lg hover:bg-brand-lightGold transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                    Get a Free Consultation
+                </a>
+                <a href="#portfolio"
+                    class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold text-lg hover:bg-white/20 transition-all transform hover:-translate-y-1">
+                    View Our Work
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Subheadline Bar -->
+    <div class="bg-brand-gold text-brand-dark py-4 overflow-hidden border-y border-brand-gold/50">
+        <div
+            class="marquee whitespace-nowrap md:text-lg font-medium tracking-wide flex space-x-8 items-center justify-around font-heading">
+            <span>🚀 HealthTech Startups</span>
+            <span>•</span>
+            <span>📚 EdTech Platforms</span>
+            <span>•</span>
+            <span>🛒 E-Commerce Solutions</span>
+            <span>•</span>
+            <span>🏢 Enterprise App Development</span>
+        </div>
+    </div>
+
+    <!-- What We Do / Services -->
+    <section id="services" class="py-24 relative dark:bg-brand-dark bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="text-center max-w-3xl mx-auto mb-16 section-heading opacity-0 translate-y-8 transition-all duration-700">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Professional <span
+                        class="text-brand-gold">Web Development</span> Services</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">Comprehensive services including custom design,
+                    e-commerce, UI/UX for healthtech, edtech, and business success.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="service-card group glass-card rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-white/10 relative overflow-hidden bg-white dark:bg-brand-blue/20">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center mb-6 border border-brand-gold/20 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-code text-2xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-heading group-hover:text-brand-gold transition-colors">Custom
+                        Web Development</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Custom sites with React, Next.js, and
+                        Supabase for maximum performance and endless scalability.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="service-card group glass-card rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-white/10 relative overflow-hidden bg-white dark:bg-brand-blue/20">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center mb-6 border border-brand-gold/20 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-2xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-heading group-hover:text-brand-gold transition-colors">
+                        Business Website Design</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Credibility-building designs tailored
+                        for startups and enterprises to convert visitors into loyal clients.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="service-card group glass-card rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-white/10 relative overflow-hidden bg-white dark:bg-brand-blue/20">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center mb-6 border border-brand-gold/20 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shopping-cart text-2xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-heading group-hover:text-brand-gold transition-colors">
+                        E-Commerce Development</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Seamless payments, inventory management
+                        with Stripe/Razorpay integrations for high conversion rates.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="service-card group glass-card rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-white/10 relative overflow-hidden bg-white dark:bg-brand-blue/20">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center mb-6 border border-brand-gold/20 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-paint-brush text-2xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-heading group-hover:text-brand-gold transition-colors">UI/UX
+                        Design Services</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Intuitive, beautiful interfaces designed
+                        in Figma that boost engagement and reduce bounce rates.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="service-card group glass-card rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-white/10 relative overflow-hidden bg-white dark:bg-brand-blue/20">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center mb-6 border border-brand-gold/20 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tools text-2xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-heading group-hover:text-brand-gold transition-colors">
+                        Website Maintenance</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Ongoing support, security updates, and
+                        performance tuning to keep your site running at peak levels.</p>
+                </div>
+
+                <!-- CTA Card -->
+                <div
+                    class="service-card flex items-center justify-center p-8 rounded-2xl bg-gradient-to-br from-brand-gold to-brand-lightGold text-brand-dark hover:scale-[1.02] transition-transform duration-300 shadow-xl shadow-brand-gold/20">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-4 font-heading">Ready to scale?</h3>
+                        <p class="font-medium mb-6">Let's discuss your custom requirements today.</p>
+                        <a href="#contact"
+                            class="inline-block px-6 py-3 bg-brand-dark text-white rounded-full font-semibold hover:bg-gray-800 transition-colors">Let's
+                            Talk <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why-us" class="py-24 bg-white dark:bg-brand-blue relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-gold/5 via-transparent to-transparent">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="text-center max-w-3xl mx-auto mb-16 section-heading opacity-0 translate-y-8 transition-all duration-700">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Why Choose <span
+                        class="text-brand-gold">Deccan Web Works</span></h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">We stand out by delivering uncompromising quality
+                    matched with modern development practices.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
+                <!-- Feature 1 -->
+                <div
+                    class="flex flex-col items-center text-center feature-item opacity-0 translate-y-8 transition-all duration-500 delay-100">
+                    <div
+                        class="w-20 h-20 rounded-full bg-blue-50 dark:bg-brand-dark border-2 border-brand-gold/30 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <i class="fas fa-rocket text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-heading">Fast Delivery</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Quick turnaround times with strict adherence to
+                        deadlines, fully without quality compromise.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="flex flex-col items-center text-center feature-item opacity-0 translate-y-8 transition-all duration-500 delay-200">
+                    <div
+                        class="w-20 h-20 rounded-full bg-blue-50 dark:bg-brand-dark border-2 border-brand-gold/30 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <i class="fas fa-layer-group text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-heading">Modern Tech Stack</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Built using the latest powerful tools: Next.js, Tailwind
+                        CSS, Supabase, and AWS capabilities.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="flex flex-col items-center text-center feature-item opacity-0 translate-y-8 transition-all duration-500 delay-300">
+                    <div
+                        class="w-20 h-20 rounded-full bg-blue-50 dark:bg-brand-dark border-2 border-brand-gold/30 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <i class="fas fa-search text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-heading">SEO Friendly</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Semantic HTML and core web vitals optimization ensure
+                        you rank high right from launch.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                    class="flex flex-col items-center text-center feature-item opacity-0 translate-y-8 transition-all duration-500 delay-400">
+                    <div
+                        class="w-20 h-20 rounded-full bg-blue-50 dark:bg-brand-dark border-2 border-brand-gold/30 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <i class="fas fa-mobile-alt text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-heading">Mobile Responsive</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Fluid layouts that look and perform perfectly across all
+                        devices, from desktops to smartphones.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div
+                    class="flex flex-col items-center text-center feature-item opacity-0 translate-y-8 transition-all duration-500 delay-500">
+                    <div
+                        class="w-20 h-20 rounded-full bg-blue-50 dark:bg-brand-dark border-2 border-brand-gold/30 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <i class="fas fa-shield-alt text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-heading">Secure & Scalable</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Enterprise-grade architecture designing capable of
+                        handling your traffic as your business grows.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div
+                    class="flex flex-col items-center text-center feature-item opacity-0 translate-y-8 transition-all duration-500 delay-600">
+                    <div
+                        class="w-20 h-20 rounded-full bg-blue-50 dark:bg-brand-dark border-2 border-brand-gold/30 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <i class="fas fa-headset text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-heading">24/7 Support</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Dedicated assistance for our premium clients. We are
+                        always ready to help when you need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work / Process -->
+    <section id="process" class="py-24 bg-gray-50 dark:bg-brand-dark relative hidden-overflow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="text-center max-w-3xl mx-auto mb-20 section-heading opacity-0 translate-y-8 transition-all duration-700">
+                <span
+                    class="text-brand-gold font-semibold tracking-wider uppercase text-sm mb-2 block">Methodology</span>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Our <span
+                        class="text-brand-gold">Process</span></h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">A streamlined approach ensuring transparent
+                    communication and spectacular end results.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting line for desktop -->
+                <div
+                    class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent transform -translate-y-1/2 z-0">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+                    <!-- Step 1 -->
+                    <div
+                        class="text-center group process-step opacity-0 translate-y-8 transition-all duration-500 delay-100">
+                        <div
+                            class="w-16 h-16 mx-auto bg-brand-dark dark:bg-brand-blue border-4 border-gray-50 dark:border-brand-dark rounded-full flex items-center justify-center text-brand-gold font-bold text-2xl relative shadow-lg group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                            1
+                            <div
+                                class="absolute inset-0 rounded-full bg-brand-gold/30 blur-md -z-10 group-hover:opacity-100 opacity-0 transition-opacity">
+                            </div>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold font-heading">Planning</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">Analyze goals, audience, and detailed
+                            technical requirements.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="text-center group process-step opacity-0 translate-y-8 transition-all duration-500 delay-200">
+                        <div
+                            class="w-16 h-16 mx-auto bg-brand-dark dark:bg-brand-blue border-4 border-gray-50 dark:border-brand-dark rounded-full flex items-center justify-center text-brand-gold font-bold text-2xl relative shadow-lg group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                            2
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold font-heading">Design</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">Create pixel-perfect, modern, and
+                            conversion-focused mockups.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="text-center group process-step opacity-0 translate-y-8 transition-all duration-500 delay-300">
+                        <div
+                            class="w-16 h-16 mx-auto bg-brand-dark dark:bg-brand-blue border-4 border-gray-50 dark:border-brand-dark rounded-full flex items-center justify-center text-brand-gold font-bold text-2xl relative shadow-lg group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                            3
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold font-heading">Development</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">Write clean, performant, and secure
+                            code architecture.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div
+                        class="text-center group process-step opacity-0 translate-y-8 transition-all duration-500 delay-400">
+                        <div
+                            class="w-16 h-16 mx-auto bg-brand-dark dark:bg-brand-blue border-4 border-gray-50 dark:border-brand-dark rounded-full flex items-center justify-center text-brand-gold font-bold text-2xl relative shadow-lg group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                            4
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold font-heading">Launch</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">Deploy to production, thoroughly test,
+                            and optimize for speed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work / Portfolio -->
+    <section id="portfolio" class="py-24 bg-white dark:bg-brand-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl section-heading opacity-0 translate-y-8 transition-all duration-700">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Featured <span
+                            class="text-brand-gold">Projects</span></h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">A glimpse into our successful projects for
+                        clients in India & worldwide.</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="#contact"
+                        class="hidden md:inline-flex items-center text-brand-gold font-medium hover:underline group">
+                        Start your project <i
+                            class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: Vishwas.io -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
+                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
+                        <img src="https://api.microlink.io/?url=https://vishwas.io&screenshot=true&meta=false&embed=screenshot.url"
+                            alt="Vishwas.io Platform"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">Business
+                            Website</span>
+                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Vishwas Platform</h3>
+                        <p class="text-gray-300 text-sm mb-4">Modern and scalable web platform designed for unparalleled
+                            user experience.</p>
+                        <a href="https://vishwas.io" target="_blank"
+                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
+                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Cutora -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
+                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
+                        <img src="https://api.microlink.io/?url=https://cutora.vercel.app&screenshot=true&meta=false&embed=screenshot.url"
+                            alt="Cutora App"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">Web App</span>
+                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Cutora Application</h3>
+                        <p class="text-gray-300 text-sm mb-4">A high-performance web application tailored to meet
+                            dynamic user needs.</p>
+                        <a href="https://Cutora.vercel.app" target="_blank"
+                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
+                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Farm2Spoon -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
+                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
+                        <img src="https://api.microlink.io/?url=https://farm2spoon.in&screenshot=true&meta=false&embed=screenshot.url"
+                            alt="Farm to Spoon"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">E-Commerce</span>
+                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Farm2Spoon</h3>
+                        <p class="text-gray-300 text-sm mb-4">Direct-to-consumer agriculture e-commerce platform
+                            ensuring fresh deliveries.</p>
+                        <a href="https://Farm2spoon.in" target="_blank"
+                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
+                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Sri Aurobindo Integral School -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
+                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
+                        <img src="https://api.microlink.io/?url=https://www.sriaurobindointegralschool.com&screenshot=true&meta=false&embed=screenshot.url"
+                            alt="Sri Aurobindo Integral School"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">Education</span>
+                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Sri Aurobindo School</h3>
+                        <p class="text-gray-300 text-sm mb-4">Comprehensive digital presence for reputed educational
+                            institution.</p>
+                        <a href="https://www.sriaurobindointegralschool.com" target="_blank"
+                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
+                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: SVC Homes -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
+                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
+                        <img src="https://api.microlink.io/?url=https://www.svchomes.in&screenshot=true&meta=false&embed=screenshot.url"
+                            alt="SVC Homes"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">Real Estate</span>
+                        <h3 class="text-xl font-bold text-white mb-2 font-heading">SVC Homes</h3>
+                        <p class="text-gray-300 text-sm mb-4">Premium real estate listing website for high-end
+                            properties and luxury living.</p>
+                        <a href="https://www.svchomes.in" target="_blank"
+                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
+                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: Spark EdX -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
+                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
+                        <img src="https://api.microlink.io/?url=https://www.sparkedx.com&screenshot=true&meta=false&embed=screenshot.url"
+                            alt="Spark EdX"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">EdTech</span>
+                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Spark EdX</h3>
+                        <p class="text-gray-300 text-sm mb-4">Modern educational platform empowering students with
+                            digital resources.</p>
+                        <a href="https://www.sparkedx.com" target="_blank"
+                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
+                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7: Spark Phonics -->
+                <div
+                    class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl lg:col-span-1 md:col-span-2">
+                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
+                        <img src="https://api.microlink.io/?url=https://sparkphonics.com&screenshot=true&meta=false&embed=screenshot.url"
+                            alt="Spark Phonics"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">EdTech /
+                            Kids</span>
+                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Spark Phonics</h3>
+                        <p class="text-gray-300 text-sm mb-4">Interactive phonics learning application tailored
+                            specifically for young children.</p>
+                        <a href="https://sparkphonics.com" target="_blank"
+                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
+                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-500 dark:text-gray-400 italic mb-4">...and many more successful projects for clients
+                    in India & worldwide.</p>
+                <a href="#contact"
+                    class="md:hidden inline-flex items-center justify-center w-full px-8 py-3 rounded-full bg-brand-gold text-brand-dark font-semibold">
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch / CTA -->
+    <section id="contact" class="py-24 bg-brand-blue dark:bg-brand-dark relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-green/20 pointer-events-none z-0"></div>
+        <div
+            class="absolute -top-40 -right-40 w-96 h-96 bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none z-0">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                <!-- Contact Info -->
+                <div class="text-white">
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">Let's Discuss <span
+                            class="text-brand-gold">Your Project</span></h2>
+                    <p class="text-gray-300 text-lg mb-10 max-w-lg">Transform your vision into reality. Partner with
+                        Hyderabad's premier web development agency to scale your digital presence.</p>
+
+                    <div class="space-y-6 mb-12">
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-gold mr-4 flex-shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 uppercase tracking-wider mb-1">Call Us</h4>
+                                <a href="tel:+918309653769"
+                                    class="text-xl font-medium hover:text-brand-gold transition-colors">+91
+                                    8309653769</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-gold mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 uppercase tracking-wider mb-1">Location</h4>
+                                <p class="text-xl font-medium">Vijayawada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                        <h4 class="font-bold mb-4 font-heading text-lg">Why partner with us?</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3"></i> Free
+                                comprehensive consultation</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3"></i>
+                                Dedicated project manager</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3"></i>
+                                Transparent, milestone-based pricing</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-brand-gold mr-3"></i>
+                                3-month free post-launch support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div
+                    class="bg-white dark:bg-brand-blue border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-2xl relative">
+                    <form id="contactForm" action="https://formspree.io/f/xeerqobk" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your
+                                    Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all dark:text-white"
+                                    placeholder="Kiran Kumar" required>
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email
+                                    Address</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all dark:text-white"
+                                    placeholder="kiran@example.com" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="type"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Project
+                                Type</label>
+                            <select id="type" name="type"
+                                class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all dark:text-white appearance-none cursor-pointer">
+                                <option value="" disabled selected>Select a project type</option>
+                                <option value="business">Business Website</option>
+                                <option value="ecommerce">E-commerce Store</option>
+                                <option value="webapp">Web App</option>
+                                <option value="mobileapp">Mobile App</option>
+                                <option value="landing">Landing Page</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="timeline"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Estimated
+                                Timeline</label>
+                            <select id="timeline" name="timeline"
+                                class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all dark:text-white appearance-none cursor-pointer">
+                                <option value="asap">ASAP</option>
+                                <option value="1-2weeks">1-2 Weeks</option>
+                                <option value="1month">1 Month</option>
+                                <option value="flex">Flexible</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="description"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Project
+                                Details</label>
+                            <textarea id="description" name="description" rows="4"
+                                class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all dark:text-white resize-none"
+                                placeholder="Tell us about your goals, requirements, and any reference sites..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 rounded-xl bg-brand-gold text-brand-dark font-bold text-lg hover:bg-brand-lightGold hover:shadow-lg hover:shadow-brand-gold/30 transition-all transform hover:-translate-y-1">
+                            Send Project Inquiry <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-white/10 pt-16 pb-8 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="#" class="font-heading font-bold text-2xl tracking-tight text-white mb-6 inline-block">
+                        Deccan<span class="text-brand-gold">Web</span>Works
+                    </a>
+                    <p class="text-sm mb-6 leading-relaxed">India's top-rated web development agency driving real growth
+                        with cutting-edge tech.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-colors"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-colors"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-colors"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-colors"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase text-sm tracking-widest">Quick Links
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-gold transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-brand-gold transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase text-sm tracking-widest">Our Services
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">E-Commerce Solutions</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Web App Development</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">SEO & Performance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase text-sm tracking-widest">Contact Info
+                    </h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-gold mt-1 mr-3"></i>
+                            <span>Vijayawada</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-brand-gold mr-3"></i>
+                            <a href="tel:+918309653769" class="hover:text-white transition-colors">+91 8309653769</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Deccan Web Works. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-6">
+                    <a href="#" class="hover:text-brand-gold transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">Terms of Service</a>
+                </div>
+            </div>
+            <div class="text-center mt-6">
+                <a href="#contact"
+                    class="inline-block px-8 py-3 rounded-full bg-brand-gold text-brand-dark font-bold hover:bg-brand-lightGold transition-colors">Start
+                    Your Project</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for interactivity -->
+    <script src="script.js"></script>
+</body>
+
+</html>

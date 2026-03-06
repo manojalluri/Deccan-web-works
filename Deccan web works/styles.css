@@ -1,0 +1,81 @@
+/* Custom Styles & Overrides */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Offset for sticky header */
+}
+
+/* Glassmorphism effects */
+.glass-card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* Custom Selection */
+::selection {
+    background: #D4AF37;
+    color: #05111E;
+}
+
+/* Hide scrollbar for marquee */
+.marquee-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Marquee Animation */
+.marquee {
+    animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animation-delay-100 {
+    animation-delay: 0.1s;
+}
+
+.animation-delay-200 {
+    animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+    animation-delay: 0.3s;
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+.animate-scroll-down {
+    animation: scrollDown 2s infinite;
+}
+
+/* Intersection Observer utility classes */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
