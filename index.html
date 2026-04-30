@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 
 <head>
     <meta charset="UTF-8">
@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-gray-50 text-gray-900 dark:bg-brand-dark dark:text-gray-100 font-sans transition-colors duration-300">
+<body class="bg-brand-dark text-gray-100 font-sans">
 
     <!-- Navigation -->
     <nav id="navbar"
@@ -62,15 +62,10 @@
                     <a href="#services" class="text-sm font-medium hover:text-brand-gold transition-colors">Services</a>
                     <a href="#why-us" class="text-sm font-medium hover:text-brand-gold transition-colors">Why Us</a>
                     <a href="#process" class="text-sm font-medium hover:text-brand-gold transition-colors">Process</a>
-                    <a href="#portfolio"
-                        class="text-sm font-medium hover:text-brand-gold transition-colors">Portfolio</a>
+
                     <a href="#contact" class="text-sm font-medium hover:text-brand-gold transition-colors">Contact</a>
 
-                    <button id="theme-toggle"
-                        class="text-gray-500 dark:text-gray-400 hover:text-brand-gold dark:hover:text-brand-gold transition-colors">
-                        <i class="fas fa-moon dark:hidden" id="theme-toggle-dark-icon"></i>
-                        <i class="fas fa-sun hidden dark:block" id="theme-toggle-light-icon"></i>
-                    </button>
+
 
                     <a href="#contact"
                         class="px-6 py-2.5 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-brand-lightGold transition-all transform hover:-translate-y-0.5 shadow-lg shadow-brand-gold/30">Get
@@ -78,10 +73,7 @@
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center space-x-4">
-                    <button id="theme-toggle-mobile" class="text-gray-500 dark:text-gray-400">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block"></i>
-                    </button>
+
                     <button id="mobile-menu-btn"
                         class="text-gray-600 dark:text-gray-300 hover:text-brand-gold focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -101,8 +93,7 @@
                     Us</a>
                 <a href="#process"
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50 dark:hover:bg-white/5">Process</a>
-                <a href="#portfolio"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50 dark:hover:bg-white/5">Portfolio</a>
+
                 <a href="#contact"
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-brand-gold hover:bg-gray-50 dark:hover:bg-white/5">Contact</a>
                 <a href="#contact"
@@ -145,10 +136,7 @@
                     class="w-full sm:w-auto px-8 py-4 sm:py-4 rounded-full bg-[#E5B632] text-[#0A111E] font-bold text-base sm:text-[17px] hover:bg-[#F2C649] transition-all transform hover:-translate-y-1 shadow-[0_0_30px_rgba(229,182,50,0.15)] hover:shadow-[0_0_40px_rgba(229,182,50,0.25)]">
                     Get a Free Consultation
                 </a>
-                <a href="#portfolio"
-                    class="w-full sm:w-auto px-8 py-4 sm:py-4 rounded-full bg-[#1E293B] border border-white/10 text-white font-bold text-base sm:text-[17px] hover:bg-[#334155] transition-all transform hover:-translate-y-1">
-                    View Our Work
-                </a>
+
             </div>
 
 
@@ -190,8 +178,8 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3 font-heading group-hover:text-brand-gold transition-colors">Custom
                         Web Development</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Custom sites with React, Next.js, and
-                        Supabase for maximum performance and endless scalability.</p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Custom sites with Next.js, TypeScript, and
+                        Node.js for maximum performance and endless scalability.</p>
                 </div>
 
                 <!-- Card 2 -->
@@ -297,7 +285,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2 font-heading">Modern Tech Stack</h3>
                     <p class="text-gray-600 dark:text-gray-400">Built using the latest powerful tools: Next.js, Tailwind
-                        CSS, Supabase, and AWS capabilities.</p>
+                        CSS, PostgreSQL, and AWS capabilities.</p>
                 </div>
 
                 <!-- Feature 3 -->
@@ -426,183 +414,7 @@
         </div>
     </section>
 
-    <!-- Our Work / Portfolio -->
-    <section id="portfolio" class="py-24 bg-white dark:bg-brand-blue">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div class="max-w-2xl section-heading opacity-0 translate-y-8 transition-all duration-700">
-                    <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Featured <span
-                            class="text-brand-gold">Projects</span></h2>
-                    <p class="text-lg text-gray-600 dark:text-gray-400">A glimpse into our successful projects for
-                        clients in India & worldwide.</p>
-                </div>
-                <div class="mt-6 md:mt-0">
-                    <a href="#contact"
-                        class="hidden md:inline-flex items-center text-brand-gold font-medium hover:underline group">
-                        Start your project <i
-                            class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-            </div>
 
-            <!-- Portfolio Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Project 1: Vishwas.io -->
-                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
-                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
-                        <img src="https://api.microlink.io/?url=https://vishwas.io&screenshot=true&meta=false&embed=screenshot.url"
-                            alt="Vishwas.io Platform"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">Business
-                            Website</span>
-                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Vishwas Platform</h3>
-                        <p class="text-gray-300 text-sm mb-4">Modern and scalable web platform designed for unparalleled
-                            user experience.</p>
-                        <a href="https://vishwas.io" target="_blank"
-                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
-                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2: Cutora -->
-                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
-                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
-                        <img src="https://api.microlink.io/?url=https://cutora.vercel.app&screenshot=true&meta=false&embed=screenshot.url"
-                            alt="Cutora App"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">Web App</span>
-                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Cutora Application</h3>
-                        <p class="text-gray-300 text-sm mb-4">A high-performance web application tailored to meet
-                            dynamic user needs.</p>
-                        <a href="https://Cutora.vercel.app" target="_blank"
-                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
-                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3: Farm2Spoon -->
-                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
-                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
-                        <img src="https://api.microlink.io/?url=https://farm2spoon.in&screenshot=true&meta=false&embed=screenshot.url"
-                            alt="Farm to Spoon"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">E-Commerce</span>
-                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Farm2Spoon</h3>
-                        <p class="text-gray-300 text-sm mb-4">Direct-to-consumer agriculture e-commerce platform
-                            ensuring fresh deliveries.</p>
-                        <a href="https://Farm2spoon.in" target="_blank"
-                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
-                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4: Sri Aurobindo Integral School -->
-                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
-                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
-                        <img src="https://api.microlink.io/?url=https://www.sriaurobindointegralschool.com&screenshot=true&meta=false&embed=screenshot.url"
-                            alt="Sri Aurobindo Integral School"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">Education</span>
-                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Sri Aurobindo School</h3>
-                        <p class="text-gray-300 text-sm mb-4">Comprehensive digital presence for reputed educational
-                            institution.</p>
-                        <a href="https://www.sriaurobindointegralschool.com" target="_blank"
-                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
-                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 5: SVC Homes -->
-                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
-                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
-                        <img src="https://api.microlink.io/?url=https://www.svchomes.in&screenshot=true&meta=false&embed=screenshot.url"
-                            alt="SVC Homes"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">Real Estate</span>
-                        <h3 class="text-xl font-bold text-white mb-2 font-heading">SVC Homes</h3>
-                        <p class="text-gray-300 text-sm mb-4">Premium real estate listing website for high-end
-                            properties and luxury living.</p>
-                        <a href="https://www.svchomes.in" target="_blank"
-                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
-                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 6: Spark EdX -->
-                <div class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl">
-                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
-                        <img src="https://api.microlink.io/?url=https://www.sparkedx.com&screenshot=true&meta=false&embed=screenshot.url"
-                            alt="Spark EdX"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">EdTech</span>
-                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Spark EdX</h3>
-                        <p class="text-gray-300 text-sm mb-4">Modern educational platform empowering students with
-                            digital resources.</p>
-                        <a href="https://www.sparkedx.com" target="_blank"
-                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
-                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 7: Spark Phonics -->
-                <div
-                    class="group relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-brand-dark shadow-xl lg:col-span-1 md:col-span-2">
-                    <div class="aspect-w-16 aspect-h-12 w-full h-64 overflow-hidden">
-                        <img src="https://api.microlink.io/?url=https://sparkphonics.com&screenshot=true&meta=false&embed=screenshot.url"
-                            alt="Spark Phonics"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2">EdTech /
-                            Kids</span>
-                        <h3 class="text-xl font-bold text-white mb-2 font-heading">Spark Phonics</h3>
-                        <p class="text-gray-300 text-sm mb-4">Interactive phonics learning application tailored
-                            specifically for young children.</p>
-                        <a href="https://sparkphonics.com" target="_blank"
-                            class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-brand-gold text-brand-dark font-medium hover:bg-white transition-colors text-sm w-max">
-                            View Live Site <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="text-center mt-12">
-                <p class="text-gray-500 dark:text-gray-400 italic mb-4">...and many more successful projects for clients
-                    in India & worldwide.</p>
-                <a href="#contact"
-                    class="md:hidden inline-flex items-center justify-center w-full px-8 py-3 rounded-full bg-brand-gold text-brand-dark font-semibold">
-                    Start Your Project
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Get In Touch / CTA -->
     <section id="contact" class="py-24 bg-brand-blue dark:bg-brand-dark relative overflow-hidden">
@@ -634,6 +446,17 @@
                                 <a href="tel:+918309653769"
                                     class="text-xl font-medium hover:text-brand-gold transition-colors">+91
                                     8309653769</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-gold mr-4 flex-shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 uppercase tracking-wider mb-1">WhatsApp</h4>
+                                <a href="https://wa.me/918309653769" target="_blank"
+                                    class="text-xl font-medium hover:text-brand-gold transition-colors">Chat with Us</a>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -684,6 +507,14 @@
                                 <input type="email" id="email" name="email"
                                     class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all dark:text-white"
                                     placeholder="kiran@example.com" required>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="phone"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone
+                                    Number</label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all dark:text-white"
+                                    placeholder="+91 83096 53769" required>
                             </div>
                         </div>
 
@@ -771,7 +602,7 @@
                         <li><a href="#" class="hover:text-brand-gold transition-colors">Home</a></li>
                         <li><a href="#about" class="hover:text-brand-gold transition-colors">About Us</a></li>
                         <li><a href="#services" class="hover:text-brand-gold transition-colors">Services</a></li>
-                        <li><a href="#portfolio" class="hover:text-brand-gold transition-colors">Portfolio</a></li>
+
                         <li><a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -820,6 +651,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918309653769" target="_blank"
+        class="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group">
+        <i class="fab fa-whatsapp text-white text-4xl"></i>
+        <span
+            class="absolute right-full mr-4 bg-white dark:bg-brand-blue text-gray-800 dark:text-white px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-xl whitespace-nowrap pointer-events-none border border-gray-100 dark:border-white/10">
+            Chat on WhatsApp
+        </span>
+    </a>
 
     <!-- Script for interactivity -->
     <script src="script.js"></script>

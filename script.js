@@ -25,33 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Dark Mode Toggle Functionality
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
 
-    // Check for saved theme preference or system preference
-    const isDarkMode = localStorage.getItem('theme') === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-    // Apply initial theme
-    if (isDarkMode) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
-
-    const toggleTheme = () => {
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-        }
-    };
-
-    themeToggleBtn.addEventListener('click', toggleTheme);
-    themeToggleMobileBtn.addEventListener('click', toggleTheme);
 
     // Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
